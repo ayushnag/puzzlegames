@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #0f0f0f;
+}
+
+.container {
+    text-align: center; /* Center align the contents */
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(5, 50px);
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.box {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #4b4b4b;
+    text-align: center;
+    font-family: "Lucida Console", monospace;
+    /* font-family: Helvetica, sans-serif; */
+    /* set font color to white */
+    color: #fff;
+    line-height: 50px;
+    font-size: 30px;
+    transition: all 1s;
+    background-color: #252525;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #704caf;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #4e357b;
+}
+
+.notification {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(24, 104, 188, 0.8);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 1s ease-in-out;
+}
+
+.notification.show {
+    opacity: 1;
+}
+
+/* Styling for the large title */
+.large-title {
+    font-size: 4rem; /* Adjust size as needed */
+    font-weight: bold;
+    color: #333; /* Text color */
+    text-align: center;
+    text-transform: uppercase;
+    /* Additional styles such as font-family, letter-spacing, etc. can be added here */
+}
+
+
+@keyframes shake {
+    10%, 90% {
+      transform: translate3d(-1px, 0, 0);
+    }
+    20%, 80% {
+      transform: translate3d(2px, 0, 0);
+    }
+    30%, 50%, 70% {
+      transform: translate3d(-4px, 0, 0);
+    }
+    40%, 60% {
+      transform: translate3d(4px, 0, 0);
+    }
+  }
+  
+  .apply-shake {
+      animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
+  }
